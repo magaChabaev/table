@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  font-family: "Nanum Gothic", sans-serif;
+  margin: 0px;
+}
+
+/* делаем из рутового эдемента флекс контейнер, задаем высоту, фон и расположение элементов */
+.main {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(213, 32%, 90%);
+  padding-top: 50px;
+}
+
+/* делаем таблицу шириной в 50% от видимой области, задаем округление, отступы */
+.table {
+  width: 50vw;
+  background: white;
+  border-radius: 10px;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.eyeColor {
+  width: 100px;
+}
+
+th {
+  padding: 10px;
+}
+
+tbody:not(:last-child) {
+  border-bottom: 1px solid hsl(210, 40%, 94%);
+}
+/* обрезать ячейку "Описание" до двух строк */
+td.about:not(:first-child) {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+td {
+  padding: 0 10px;
+  margin: 10px 10px 10px 10px;
+}
+
+/* инпут задается абсолютно */
+.input {
+  position: absolute;
+  z-index: 3;
+  visibility: visible;
+  top: 0;
+  left: 0;
+}
+
+.show {
+  display: none !important;
+}
+
+.show-input {
+  display: none !important;
+}
+/* стили для контейнера с кнопками, селектом и чекбоксами */
+.container {
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* стили для контейнера с кнопками */
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+/* стили для селекта */
+.select {
+  background-color: hsl(205, 41%, 96%);
+  border-radius: 3px;
+  width: 150px;
+  padding: 9px;
+  border: 1px solid hsl(213, 32%, 90%);
+  cursor: pointer;
+}
+/* стили для кнопок */
+.button {
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 10px;
+  width: 100px;
+  background-color: rgb(51, 102, 255);
+  cursor: pointer;
+}
